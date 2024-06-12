@@ -1,0 +1,20 @@
+digraph NFA {
+    rankdir=LR;
+    node [shape=circle];
+    edge [fontsize=10];
+    
+    // Başlangıç durumu
+    start [shape=none label=""];
+    start -> q0;
+    
+    // Kabul durumları
+    q2 [shape=doublecircle];
+
+    // Geçişler
+    q0 -> q0 [label="a"];
+    q0 -> q0 [label="b"];
+    q0 -> q1 [label="a"];
+    q0 -> q2 [label="b"];
+    q1 -> q2 [label="a"];
+    q1 -> q2 [label="b"];
+}
